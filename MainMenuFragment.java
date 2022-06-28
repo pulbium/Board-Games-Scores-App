@@ -1,7 +1,6 @@
 package wisniewski.pum.boardgamesscores;
 
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
 
 import android.transition.TransitionInflater;
@@ -9,12 +8,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+public class MainMenuFragment extends Fragment{
 
-public class NewTemplateFragment extends Fragment {
-
-
-    public NewTemplateFragment() {
-        super(R.layout.fragment_new_template);
+    public MainMenuFragment() {
+        super(R.layout.fragment_main_menu);
     }
 
     @Override
@@ -22,18 +19,16 @@ public class NewTemplateFragment extends Fragment {
         super.onCreate(savedInstanceState);
         TransitionInflater inflater = TransitionInflater.from(requireContext());
         setExitTransition(inflater.inflateTransition(R.transition.fade));
-        setEnterTransition(inflater.inflateTransition(R.transition.slide_right));
     }
 
+    public static MainMenuFragment newInstance() {
+        return new MainMenuFragment();
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-        return inflater.inflate(R.layout.fragment_new_template, container, false);
-    }
-
-    public static NewTemplateFragment newInstance() {
-        return new NewTemplateFragment();
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_main_menu, container, false);
     }
 }

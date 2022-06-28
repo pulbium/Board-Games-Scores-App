@@ -9,12 +9,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+public class CreateNewTemplateFragment extends Fragment {
 
-public class NewTemplateFragment extends Fragment {
 
-
-    public NewTemplateFragment() {
-        super(R.layout.fragment_new_template);
+    public CreateNewTemplateFragment() {
+        // Required empty public constructor
     }
 
     @Override
@@ -25,15 +24,14 @@ public class NewTemplateFragment extends Fragment {
         setEnterTransition(inflater.inflateTransition(R.transition.slide_right));
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-        return inflater.inflate(R.layout.fragment_new_template, container, false);
+        return (ViewGroup) inflater.inflate(
+                R.layout.fragment_create_new_template, container, false);
     }
 
-    public static NewTemplateFragment newInstance() {
-        return new NewTemplateFragment();
+    public static CreateNewTemplateFragment newInstance() {
+        return new CreateNewTemplateFragment();
     }
 }
